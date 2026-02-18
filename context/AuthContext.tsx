@@ -107,7 +107,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       clearTimeout(failsafe);
       subscription.unsubscribe();
     };
-  }, [fetchProfile]);
+  }, []);
 
   const signOut = useCallback(async () => {
     try {
