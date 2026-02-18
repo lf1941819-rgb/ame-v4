@@ -37,20 +37,16 @@ export const Login: React.FC<LoginProps> = ({ onGoToSignup }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 overflow-hidden">
       {/* 1. LOGO */}
-      <div className="mb-8">
+      <div className="mb-2">
         <BrandLogo className="scale-110 md:scale-125" />
       </div>
 
-      {/* 2. TÍTULO */}
-      <h1 className="text-5xl md:text-4xl font-black text-center uppercase tracking-tight leading-none flex flex-col mb-4">
-        <span className="text-white">Missões que</span>
-        <span className="text-primary">Transformam</span>
-      </h1>
+      
 
       
 
-      {/* 4. FORMULÁRIO */}
-      <div className="w-full max-w-sm mt-12">
+     {/* 4. FORMULÁRIO */}
+      <div className="w-full max-w-sm mt-2">
         {error && (
           <div className="bg-primary/20 border border-primary/30 text-primary p-3 rounded-lg mb-6 text-xs text-center font-bold uppercase tracking-widest">
             {error}

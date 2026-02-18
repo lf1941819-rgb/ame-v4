@@ -11,7 +11,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({ className = "", showSlogan
       <img 
         src="/icons/logo.svg" 
         alt="AME Logo" 
-        className="w-24 md:w-28 h-auto object-contain select-none"
+        className="w-64 md:w-76 h-auto object-contain select-none"
         
       />
       {showSlogan && (
