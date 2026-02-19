@@ -110,7 +110,7 @@ export const MissionLinks: React.FC<{ showToast: (m: string, t?: any) => void }>
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
+      <div className="flex flex-col items-center text-center gap-4 mb-10">
         <div>
           <h1 className="text-4xl font-black uppercase tracking-tighter italic">Galeria de Links</h1>
           <p className="text-muted text-sm font-medium">Registros externos e fotos da missão</p>

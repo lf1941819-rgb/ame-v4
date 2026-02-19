@@ -1,25 +1,27 @@
-import React from 'react';
+import React from "react";
 
-interface BrandLogoProps {
-  className?: string;
-  showSlogan?: boolean;
-}
-
-export const BrandLogo: React.FC<BrandLogoProps> = ({ className = "", showSlogan = false }) => {
+export function LoginLogo({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex flex-col items-center ${className}`}>
-      <img 
-        src="/icons/logo.svg" 
-        alt="AME Logo" 
-        className="w-64 md:w-76 h-auto object-contain select-none"
-        
+    <div className={`flex flex-col items-center justify-start ${className}`}>
+      <img
+        src="/icons/logo-login.svg"
+        alt="AME"
+        className="mt-1 w-64 md:w-76 h-auto object-contain select-none"
+        draggable={false}
       />
-      {showSlogan && (
-        <div className="mt-2 text-center text-[10px] tracking-[0.2em] font-bold uppercase whitespace-nowrap">
-          <span className="text-white">MISSÕES QUE </span>
-          <span className="text-primary">TRANSFORMAM</span>
-        </div>
-      )}
     </div>
   );
-};
+}
+
+export function SidebarLogo({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <img
+        src="/icons/logo-sidebar.png"
+        alt="AME"
+        className="w-50 h-auto object-contain select-none"
+        draggable={false}
+      />
+    </div>
+  );
+}

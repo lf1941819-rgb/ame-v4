@@ -1,4 +1,4 @@
-import React, { Component, useState, ErrorInfo, ReactNode, useEffect } from 'react';
+import React, { Component, useState, ErrorInfo, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { Login } from './pages/Login';
@@ -23,11 +23,15 @@ interface ErrorBoundaryState { hasError: boolean; error: any; }
 
 // Fixed: Using 'Component' from imports directly ensures TypeScript correctly identifies the base class properties
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  state: ErrorBoundaryState;
+
   constructor(props: ErrorBoundaryProps) {
     super(props);
     // Initializing state within the constructor
     this.state = { hasError: false, error: null };
   }
+
+  props!: ErrorBoundaryProps;
   static getDerivedStateFromError(error: any): ErrorBoundaryState {
     return { hasError: true, error };
   }
@@ -139,7 +143,7 @@ const AppContent: React.FC = () => {
       />
 
       <main className="flex-1 min-w-0 md:ml-64 p-4 md:p-8 pb-16 relative">
-        <header className="flex md:hidden items-center justify-between mb-6 p-3 bg-surface border border-border rounded-xl">
+     <header className="flex md:hidden items-center justify-between mb-6 p-3 bg-surface border border-border rounded-xl">
           <button onClick={() => setIsSidebarOpen(true)} className="p-2 hover:bg-white/5 rounded-lg text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>

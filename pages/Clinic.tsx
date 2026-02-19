@@ -119,7 +119,7 @@ export const Clinic: React.FC<{ showToast: (m: string, t?: any) => void }> = ({ 
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col  items-center text-center mb-8">
         <h1 className="text-3xl font-black">Histórico Clínico</h1>
         <button 
           onClick={handleOpenCreate}

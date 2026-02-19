@@ -75,7 +75,7 @@ export const Reports: React.FC = () => {
   return (
     <div className="space-y-12">
       <section className="bg-surface border border-border p-8 rounded-3xl">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+        <div className="flex flex-col items-center text-center gap-6 mb-8">
           <div>
             <h1 className="text-3xl font-black italic">Relatório do Dia</h1>
             <p className="text-muted font-medium">{formatMissionDay(missionDay)}</p>

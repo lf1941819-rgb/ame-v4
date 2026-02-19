@@ -117,7 +117,7 @@ export const Points: React.FC<{ showToast: (m: string, t?: any) => void }> = ({ 
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+      <div className="flex flex-col  items-center text-center gap-4 mb-8">
         <div>
           <h1 className="text-3xl font-black">Pontos de Missão</h1>
           <p className="text-muted text-sm font-medium">Gerenciamento de locais de atendimento</p>

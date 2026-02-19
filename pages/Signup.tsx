@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
-import { BrandLogo } from '../components/BrandLogo';
+import { LoginLogo } from '../components/BrandLogo';
 
 interface SignupProps {
   onGoToLogin: () => void;
@@ -66,7 +66,7 @@ export const Signup: React.FC<SignupProps> = ({ onGoToLogin }) => {
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-md bg-surface border border-border rounded-2xl p-8 shadow-2xl">
         <div className="flex justify-center mb-8">
-          <BrandLogo />
+          <LoginLogo />
         </div>
         
         <h2 className="text-2xl font-bold mb-6 text-center">Solicitar Acesso</h2>

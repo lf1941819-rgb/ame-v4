@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { BrandLogo } from './BrandLogo';
+import { SidebarLogo} from './BrandLogo';
 
 interface SidebarProps {
   activeTab: string;
@@ -44,11 +44,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, onSig
       ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
     `}>
       <div className="p-6 border-b border-border flex flex-col items-center">
-        <BrandLogo showSlogan={true} className="mb-6" />
+        <SidebarLogo className="mb-0" />
         
-        <div className="mt-4 w-full text-center">
-          <p className="text-[10px] text-muted uppercase tracking-wider mb-1 font-bold">Usuário Ativo</p>
-          <p className="text-sm font-semibold truncate text-white uppercase">Olá, {profile?.full_name?.split(' ')[0]}</p>
+        <div className="mt-1 w-full text-center">
+          
+          <p className="text-xl font-semibold truncate text-white uppercase">Olá, {profile?.full_name?.split(' ')[0]}</p>
           <span className="inline-block px-2 py-0.5 bg-primary/10 text-primary text-[10px] rounded uppercase font-bold mt-1 tracking-tighter">
             Nível: {profile?.role || 'voluntario'}
           </span>

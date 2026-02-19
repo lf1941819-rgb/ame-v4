@@ -113,7 +113,7 @@ export const Settings: React.FC<{ showToast: (m: string, t?: any) => void }> = (
 
   return (
     <div className="max-w-4xl mx-auto space-y-12">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col items-center text-center gap-6 mb-12">
         <h1 className="text-3xl font-black uppercase tracking-tight">Gerenciamento Geral</h1>
         <button 
           onClick={handleInstallClick}

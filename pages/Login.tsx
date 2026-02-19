@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
-import { BrandLogo } from '../components/BrandLogo';
+import { LoginLogo } from '../components/BrandLogo';
 
 interface LoginProps {
   onGoToSignup: () => void;
@@ -38,7 +38,7 @@ export const Login: React.FC<LoginProps> = ({ onGoToSignup }) => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 overflow-hidden">
       {/* 1. LOGO */}
       <div className="mb-2 pl-4">
-        <BrandLogo className="scale-110 md:scale-125" />
+        <LoginLogo className="scale-110 md:scale-125" />
       </div>
 
       

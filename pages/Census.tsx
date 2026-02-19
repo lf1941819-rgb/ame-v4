@@ -127,9 +127,9 @@ export const Census: React.FC<{ showToast: (m: string, t?: any) => void }> = ({ 
 
   return (
     <div className="max-w-4xl mx-auto pb-20">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-border pb-6 gap-4">
+      <div className="flex flex-col items-center text-center mb-10 border-b border-border pb-6 gap-4">
         <div>
-          <h1 className="text-4xl font-black italic uppercase tracking-tighter">Censo Diário</h1>
+          <h1 className="text-4xl font-black italic uppercase tracking-tighter text-center">Censo DiáriO</h1>
           <p className="text-muted font-bold uppercase tracking-widest text-[10px] mt-1">
             Missão: <span className="text-white">{formatMissionDay(missionDay)}</span>
           </p>

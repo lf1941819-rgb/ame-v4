@@ -80,7 +80,7 @@ export const Dashboard: React.FC = () => {
   if (loading) return (
     <div className="animate-pulse space-y-8">
       <div className="h-12 bg-surface rounded-xl w-48"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 gap-4 items-stretch">
         {[1,2,3,4,5,6].map(i => <div key={i} className="h-32 bg-surface rounded-xl border border-border"></div>)}
       </div>
     </div>
@@ -117,14 +117,39 @@ export const Dashboard: React.FC = () => {
               </span>
             </div>
 
-            {verse ? (
-              <div className="bg-primary/5 border border-primary/10 p-5 rounded-2xl max-w-2xl italic">
-                <p className="text-white font-serif leading-relaxed">"{verse.text}"</p>
-                <span className="text-primary text-xs font-bold mt-3 block tracking-wide uppercase tracking-widest">— {verse.reference}</span>
-              </div>
-            ) : (
-              <p className="text-muted text-sm italic font-medium">"Ide por todo o mundo e pregai o evangelho a toda criatura."</p>
-            )}
+           {verse ? (
+  <div className="mx-auto text-center max-w-3xl relative 
+                  bg-gradient-to-br from-primary/10 to-transparent
+                  border border-primary/20
+                  p-10 rounded-3xl shadow-2xl overflow-hidden">
+
+    {/* aspas decorativas */}
+    <div className="absolute text-primary/10 text-[120px] font-serif top-0 left-4 select-none">
+      "
+    </div>
+
+    <div className="absolute text-primary/10 text-[120px] font-serif bottom-[-40px] right-6 select-none">
+      "
+    </div>
+
+    {/* conteúdo */}
+    <p className="relative text-white font-serif text-xl md:text-2xl leading-relaxed italic px-6">
+      {verse.text}
+    </p>
+
+    <span className="relative text-primary text-xs font-black mt-6 block uppercase tracking-[0.35em]">
+      {verse.reference}
+    </span>
+
+    {/* glow suave */}
+    <div className="absolute inset-0 rounded-3xl ring-1 ring-primary/10 pointer-events-none"></div>
+
+  </div>
+) : (
+  <p className="text-muted text-sm italic font-medium text-center">
+    "Ide por todo o mundo e pregai o evangelho a toda criatura."
+  </p>
+)}
           </div>
         </div>
 

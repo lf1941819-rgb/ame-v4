@@ -79,7 +79,7 @@ export const People: React.FC<{ showToast: (m: string, t?: any) => void }> = ({ 
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+      <div className="flex flex-col  items-center text-center gap-4 mb-8">
         <h1 className="text-3xl font-black">Pessoas</h1>
         <button onClick={() => { setEditingPerson(null); setFormData({name:'', phone:'', notes:''}); setIsModalOpen(true); }} className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-bold uppercase tracking-widest text-xs">
           + Nova Pessoa
