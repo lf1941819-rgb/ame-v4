@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
     },
     workbox: {
       navigateFallback: "/index.html",
-      globPatterns: ["**/*.{js,css,html,ico,png,webmanifest}"],
+      globPatterns: ["**/*.{js,css,html,ico,webmanifest}"],
       globIgnores: ["**/icons/logo-login.svg"],                 //
        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024, // 4MB
     },
