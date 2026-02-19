@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
       plugins: [
   react(),
   VitePWA({
+  
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico", "robots.txt", "apple-touch-icon.png"],
     manifest: {
@@ -33,6 +34,7 @@ export default defineConfig(({ mode }) => {
     workbox: {
       navigateFallback: "/index.html",
       globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
+       maximumFileSizeToCacheInBytes: 4 * 1024 * 1024, // 4MB
     },
   }),
 ],
