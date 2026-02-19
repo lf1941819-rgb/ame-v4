@@ -100,7 +100,7 @@ export const Dashboard: React.FC = () => {
           height: '100%',
           opacity: 0.06,
           zIndex: 0,
-          backgroundImage: 'url(/images/logo.svg)',
+          
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'contain',
