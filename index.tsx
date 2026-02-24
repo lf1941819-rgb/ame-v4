@@ -17,6 +17,9 @@ import { Outflows } from './pages/Outflows';
 import { Events } from './pages/Events';
 import { Sidebar } from './components/Sidebar';
 import { Toast, ToastType } from './components/Toast';
+import { useOutboxSync } from "./src/offline/useOutboxSync";
+
+
 
 interface ErrorBoundaryProps { children?: ReactNode; }
 interface ErrorBoundaryState { hasError: boolean; error: any; }
@@ -57,7 +60,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   }
 }
 
-const AppContent: React.FC = () => {
+const AppContent: React.FC = () => { 
+  useOutboxSync();  
   const { session, profile, loading, signOut, isLoggingOut } = useAuth();
   const [view, setView] = useState('login'); 
   const [activeTab, setActiveTab] = useState('dashboard');
